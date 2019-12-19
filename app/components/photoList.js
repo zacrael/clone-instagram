@@ -40,7 +40,6 @@ class photoList extends Component {
     const { isUser } = this.props;
 
     if (isUser === true) {
-      // this.loadFeed(userId);
     } else {
       this.loadFeed("");
     }
@@ -85,7 +84,7 @@ class photoList extends Component {
   };
   fecthUserInfo = userId => {
     //get user data
-    console.log("fe", userId);
+
     var that = this;
 
     database
@@ -146,7 +145,6 @@ class photoList extends Component {
     });
     var that = this;
 
-    console.log("loadfeed", userId);
     var databaseRef = database.ref("photos");
     if (userId != "") {
       databaseRef = database
@@ -175,9 +173,8 @@ class photoList extends Component {
   };
 
   loadNew = () => {
-    // var that = this;
     const { userId } = this.state;
-    console.log("loadnew", userId);
+
     this.loadFeed(userId);
   };
   render() {
@@ -236,9 +233,6 @@ class photoList extends Component {
                     />
                     <Text>{item.username}</Text>
                   </View>
-                  {/* <Text style={{ paddingTop: 10, alignSelf: "flex-start" }}>
-                    {item.author}
-                  </Text> */}
 
                   <TouchableOpacity
                     onPress={() =>

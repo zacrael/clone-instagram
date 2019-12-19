@@ -39,7 +39,6 @@ class comments extends Component {
       .then(function(snapshot) {
         const exist = snapshot.val() !== null;
         if (exist) data = snapshot.val();
-
         that.setState({
           username: data.username,
           name: data.name,

@@ -202,7 +202,7 @@ class profile extends Component {
   processingUpload = imageUrl => {
     //
     var that = this;
-    // var imageId = this.state.imageId;
+
     var userId = f.auth().currentUser.uid;
     const { username } = this.state;
     var caption = this.state.caption;
@@ -223,8 +223,7 @@ class profile extends Component {
       .child(userId)
       .child("avatar")
       .set(avatars);
-    // database.ref("/photos/" + imageId).set(photoObj);
-    //Set user photos object
+
     database.ref("/users/" + userId + "/avatar/").set(avatars);
 
     alert("image uploaded   !!");
@@ -369,24 +368,3 @@ const styles = StyleSheet.create({
     borderWidth: 0.5
   }
 });
-{
-  /* <TouchableOpacity
-  onPress={() => this.props.navigation.navigate("Upload")}
-  style={styles.btn}
->
-  <Text style={{ textAlign: "center", color: "grey" }}>Upload New+</Text>
-</TouchableOpacity>; */
-}
-
-//
-{
-  /* <TouchableOpacity
-                  onPress={() => this.editProfile()}
-                  style={styles.btn}
-                >
-                  <Text style={{ textAlign: "center", color: "grey" }}>
-                    Edit Profile
-                  </Text>
-                </TouchableOpacity> */
-}
-//

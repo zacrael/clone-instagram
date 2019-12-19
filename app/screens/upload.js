@@ -26,7 +26,6 @@ class upload extends Component {
     };
   }
   componentDidMount() {
-    console.ignoredYellowBox = ["Setting a timer"];
     var that = this;
     f.auth().onAuthStateChanged(function(user) {
       if (user) {
@@ -78,7 +77,7 @@ class upload extends Component {
       allowsEditing: true,
       quality: 1
     });
-    console.log(result);
+
     if (!result.cancelled) {
       // this.uploadImage(result.uri);
       this.setState({
@@ -177,7 +176,7 @@ class upload extends Component {
   };
   getUserDetails = () => {
     var userId = f.auth().currentUser.uid;
-    console.log(userId, "wwew");
+
     var that = this;
 
     database

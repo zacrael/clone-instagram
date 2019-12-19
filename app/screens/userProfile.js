@@ -25,7 +25,6 @@ class userProfile extends Component {
         var that = this;
         that.setState({ userId: params.userId, onload: true });
         this.fecthUserInfo(params.userId);
-        console.log(params.userId, "wewe");
       }
     }
   };
@@ -73,10 +72,8 @@ class userProfile extends Component {
   }
 
   render() {
-    var that = this;
-    const { loggedin } = this.state;
     const { userId } = this.state;
-    console.log("userprofff", loggedin);
+
     return (
       <View style={{ flex: 1 }}>
         {this.state.loggedin === true ? (

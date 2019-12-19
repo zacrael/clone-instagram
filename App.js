@@ -46,5 +46,3 @@ const styles = StyleSheet.create({
   }
 });
 export default App;
-//amirglenfelciano@gmail.cm // password
-//try@gmail.com // 1234567
